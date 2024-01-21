@@ -14,7 +14,7 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@astrojs/netlify": "2.3.0",
+    "@astrojs/netlify": "3",
     "@astrojs/node": "^5.3.6",
     "@astrojs/solid-js": "^2.2.1",
     "@astrojs/vercel": "^3.8.2",
@@ -37,7 +37,7 @@
     "@zag-js/toast": "^0.10.5",
     "@zag-js/toggle": "^0.10.5",
     "@zag-js/tooltip": "^0.10.5",
-    "astro": "^2.10.15",
+    "astro": "3",
     "bumpp": "^9.2.0",
     "destr": "^2.0.2",
     "eslint": "^8.52.0",
