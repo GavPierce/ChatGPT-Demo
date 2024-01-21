@@ -62,7 +62,7 @@ export default defineConfig({
   ],
   output: "server",
   adapter: netlify({
-    dgeMiddleware: true,
+    edgeMiddleware: true,
   }),
   server: {
     host: "0.0.0.0",
