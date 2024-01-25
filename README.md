@@ -1,78 +1,54 @@
-![Banner](https://user-images.githubusercontent.com/1998168/235366625-e615e68d-592c-4f18-9c9f-1e5cd1778557.png)
+# Astro Starter Kit: Basics
 
-# Anse
+```sh
+npm create astro@latest -- --template basics
+```
 
-English | [简体中文](./README.zh-CN.md) | [日本語](./README_JA-JP.md)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-Anse is a fully optimized UI for AI Chats.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- 🍿 **Live preview**: https://anse.app
-- 📖 **Documentation**: https://docs.anse.app
-- ✨ **Release Notes**: https://github.com/anse-app/anse/releases
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-## Features
+## 🚀 Project Structure
 
-- **🚀 Powerful Plugin System** - Powered by `Provider plugin` , easy to extend AI platforms such as [OpenAI](https://openai.com/), [Replicate](https://replicate.com/), and also supports custom model parameters.
-- **💬 Session Record Saving** - We use `IndexDB` to store local data, it will not be uploaded to the server, security issues are guaranteed.
-- **🎉 Multiple Session Modes** - Provides different conversations modes，support `Single Conversation`, `Continuous Conversation`, `OpenAI Image Generation`、`Stable Diffusion` and more.
-- **💎 Improved UI Experience** - We have refactored the website UI for the previous version, optimized a lot of details, and also adapted to `mobile end` and `dark mode`.
-- **🌈 One-Click Deployment** - Support one-click deployment, abandoned use environment variables, you can refer to our documentation to deploy the website to [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), `Docker`, `Node` and other platforms.
+Inside of your Astro project, you'll see the following folders and files:
 
-## Running Locally
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-### Pre environment
-1. **Node**: Check that both your development environment and deployment environment are using `Node v18` or later. You can use [nvm](https://github.com/nvm-sh/nvm) to manage multiple `node` versions locally。
-   ```bash
-    node -v
-   ```
-2. **PNPM**: We recommend using [pnpm](https://pnpm.io/) to manage dependencies. If you have never installed pnpm, you can install it with the following command:
-   ```bash
-    npm i -g pnpm
-   ```
-3. **OPENAI_API_KEY**: Before running this application, you need to obtain the API key from OpenAI. You can register the API key at [https://beta.openai.com/signup](https://beta.openai.com/signup).
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-### Getting Started
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-1. Install dependencies
-   ```bash
-    pnpm install
-   ```
-2. Run the application, the local project runs on `http://localhost:3000/`
-   ```bash
-    pnpm run dev
-   ```
-3. Add your [OpenAI API key](https://platform.openai.com/account/api-keys) to the settings panel, then enjoy it!
+Any static assets, like images, can be placed in the `public/` directory.
 
-## How to deploy
-For more details, please refer to this document: https://docs.anse.app/self-deploy
+## 🧞 Commands
 
-## Enable Automatic Updates
+All commands are run from the root of the project, from a terminal:
 
-After forking the project, you need to manually enable Workflows and Upstream Sync Action on the Actions page of the forked project. Once enabled, automatic updates will be scheduled every day:
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-![](https://cdn.jsdelivr.net/gh/yzh990918/static@master/20230518/image.2omctdf8bbk0.webp)
-## Frequently Asked Questions
+## 👀 Want to learn more?
 
-Q: TypeError: fetch failed (can't connect to OpenAI Api)
-
-A: Reference: https://github.com/anse-app/chatgpt-demo/issues/34
-
-Q: throw new TypeError(`${context}` is not a ReadableStream.)
-
-A: The Node version needs to be `v18` or later，reference: https://github.com/anse-app/chatgpt-demo/issues/65
-
-Q: Accelerate domestic access without the need for proxy deployment tutorial?
-
-A: You can refer to this tutorial: https://github.com/anse-app/chatgpt-demo/discussions/270
-
-## Contributing
-
-This project exists thanks to all those who contributed.
-
-Thank you to all our supporters!🙏
-
-[![img](https://contrib.rocks/image?repo=anse-app/anse)](https://github.com/anse-app/anse/graphs/contributors)
-
-## License
-
-MIT © [ddiu8081](https://github.com/anse-app/anse/blob/main/LICENSE)
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
