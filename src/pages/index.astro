@@ -107,6 +107,7 @@ import Card from "../components/Card.astro";
   let messageHistory: any[] = [];
   document.addEventListener("DOMContentLoaded", function () {
     var input = document.querySelector(".chat-input input") as HTMLInputElement;
+    input.value += " Justin: ";
 
     // Attach event listener to the button
     var button = document.querySelector(

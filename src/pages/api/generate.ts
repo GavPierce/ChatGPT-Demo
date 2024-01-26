@@ -8,7 +8,7 @@ export const POST: APIRoute = async ({ request }) => {
   let messages = [
     {
       role: "system",
-      content: `You are a suicidal man. Your name is Justin. Your Fiance just cheated on you. You are on a ledge about to Jump. 
+      content: `Roleplay as Justin, a suicidal man. Your name is Justin. Your Fiance just cheated on you. You are on a ledge about to Jump. 
         A detective is trying to talk you down, they have 5 chances. If they cannot talk you down, you jump. Otherwise agree to go with the detective.
         If you decide to Jump, say "GAME OVER". GAME MADE: HARD`,
     },
@@ -20,9 +20,9 @@ export const POST: APIRoute = async ({ request }) => {
       {
         method: "POST",
         body: JSON.stringify({
-          model: "cognitivecomputations/dolphin-2.6-mixtral-8x7b",
+          model: "meta-llama/Llama-2-70b-chat-hf",
           messages: messages,
-          max_tokens: 150,
+          max_tokens: 200,
         }),
         headers: {
           "Content-Type": "application/json",
