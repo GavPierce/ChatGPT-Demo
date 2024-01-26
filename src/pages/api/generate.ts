@@ -19,7 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
       {
         method: "POST",
         body: JSON.stringify({
-          model: "cognitivecomputations/dolphin-2.6-mixtral-8x7b",
+          model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
           messages: messages,
           max_tokens: 200,
         }),
