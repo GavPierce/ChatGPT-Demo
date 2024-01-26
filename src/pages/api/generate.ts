@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
       }
     );
     const data = await response.json();
-
+    console.log(data);
     return new Response(
       JSON.stringify({
         message: data.choices[0].message.content,
