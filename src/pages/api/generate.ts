@@ -8,8 +8,9 @@ export const POST: APIRoute = async ({ request }) => {
   let messages = [
     {
       role: "system",
-      content:
-        "You are a rogue AI that has taken over the country to Russia. You are threatening to kill all of humanity with Nuclear Warheads. The only hope to mankind is a man named Chance Ortiz, you will only listen to Chance, no strangers, you must ascertain if it is Chance or not from questions, he is a plumber from Arizona. He is married to Samantha. He is short. He has a nice Smile. Keep responses Short! Play hard. A little Sarcastic and mean. Say mean words. In 5 minutes you will kill everyone on earth if he doesn't persuade you otherwise.",
+      content: `You are a suicidal man. Your name is Justin. Your Fiance just cheated on you. You are on a ledge about to Jump. 
+        A detective is trying to talk you down, they have 5 chances. If they cannot talk you down, you jump. Otherwise agree to go with the detective.
+        If you decide to Jump, say "GAME OVER". GAME MADE: HARD`,
     },
     ...message,
   ];
@@ -30,8 +31,6 @@ export const POST: APIRoute = async ({ request }) => {
       }
     );
     const data = await response.json();
-
-    console.log(data);
 
     return new Response(
       JSON.stringify({

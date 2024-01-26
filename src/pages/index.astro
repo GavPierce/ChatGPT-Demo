@@ -5,12 +5,12 @@ import Card from "../components/Card.astro";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1>This means <span class="text-gradient">war</span></h1>
+    <h1>Don't <span class="text-gradient">jump</span></h1>
 
     <ul role="list" class="link-card-grid messages">
       <div class="nes-container is-dark with-title message bot">
-        <p class="title">B.O.T</p>
-        <p>Hello... Would you like to play a game?</p>
+        <p class="title">Justin</p>
+        <p>I'll do it I swear!</p>
       </div>
     </ul>
     <div class="chat-input">
@@ -151,7 +151,7 @@ import Card from "../components/Card.astro";
         botMessageElement.style.fontSize = "0.7em";
         botMessageElement.classList.add("nes-container", "is-dark");
         botMessageElement.innerHTML =
-          "<p class='title'>B.O.T</p><p>" + botMessage + "</p>";
+          "<p class='title'>Justin</p><p>" + botMessage + "</p>";
         chatMessages.appendChild(botMessageElement);
 
         chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -167,7 +167,7 @@ import Card from "../components/Card.astro";
     userMessageElement.classList.add("nes-container", "is-dark", "user");
 
     userMessageElement.innerHTML =
-      "<p class='title'>USER</p><p>" + userMessage + "</p>";
+      "<p class='title'>DETECTIVE</p><p>" + userMessage + "</p>";
     chatMessages.appendChild(userMessageElement);
 
     chatMessages.scrollTop = chatMessages.scrollHeight;
