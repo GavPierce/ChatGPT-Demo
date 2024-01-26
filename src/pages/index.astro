@@ -55,7 +55,7 @@ import Card from "../components/Card.astro";
   .message {
     margin-bottom: 2em;
     font-size: 0.7em;
-    max-width: 50vw;
+    max-width: 80vw;
   }
   .user {
     align-self: flex-end;
@@ -94,6 +94,13 @@ import Card from "../components/Card.astro";
   }
   .instructions strong {
     color: rgb(var(--accent-light));
+  }
+  input {
+    max-width: 50vw;
+  }
+  // create a breakpoint
+    .ul {
+    padding-left: 0;
   }
 </style>
 <script>
@@ -140,7 +147,7 @@ import Card from "../components/Card.astro";
 
         // Display bot message
         var botMessageElement = document.createElement("div");
-        botMessageElement.style.maxWidth = "50vw";
+        botMessageElement.style.maxWidth = "80vw";
         botMessageElement.style.fontSize = "0.7em";
         botMessageElement.classList.add("nes-container", "is-dark");
         botMessageElement.innerHTML =
