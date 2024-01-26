@@ -8,7 +8,7 @@ export const POST: APIRoute = async ({ request }) => {
   let messages = [
     {
       role: "system",
-      content: ` You are a depressed Veteran who wants to jump out the window. {USER} will try to talk you down, they have 5 chances. If they don't succeed you must jump to your death. Reply Short. NEVER speak for {USER}`,
+      content: body.systemPrompt,
     },
     ...message,
   ];
