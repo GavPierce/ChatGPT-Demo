@@ -183,7 +183,10 @@ import Card from "../components/Card.astro";
         botMessageElement.style.maxWidth = "80vw";
         botMessageElement.style.fontSize = "0.7em";
         botMessageElement.classList.add("nes-container", "is-dark");
-        botMessage = botMessage.replace(/\*(.*?)\*/g, "<strong>$1</strong>");
+        botMessage = botMessage.replace(
+          /\*(.*?)\*/g,
+          "<strong style='color:b00202'>$1</strong>"
+        );
 
         botMessageElement.innerHTML = "<p>" + botMessage + "</p>";
         chatMessages.appendChild(botMessageElement);
@@ -200,7 +203,10 @@ import Card from "../components/Card.astro";
     userMessageElement.style.alignSelf = "flex-end";
     userMessageElement.classList.add("nes-container", "is-dark", "user");
     // if there is a section between two asterisks, make it bold and italic
-    userMessage = userMessage.replace(/\*(.*?)\*/g, "<strong>$1</strong>");
+    userMessage = userMessage.replace(
+      /\*(.*?)\*/g,
+      "<strong style='color:b00202'>$1</strong>"
+    );
     userMessageElement.innerHTML = "<p>" + userMessage + "</p>";
     chatMessages.appendChild(userMessageElement);
 
