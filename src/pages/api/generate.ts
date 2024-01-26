@@ -3,7 +3,8 @@ import type { APIRoute } from "astro";
 export const POST: APIRoute = async ({ request }) => {
   const body = await request.json();
   const message = body.message;
-
+  // add to the last message
+  message[message.length - 1].content += " Lieutenant Anderson:";
   const apiKey = import.meta.env.API_KEY; // Assuming you are using Node.js with process.env
   let messages = [
     {
@@ -18,13 +19,14 @@ export const POST: APIRoute = async ({ request }) => {
     },
     ...message,
   ];
+
   try {
     const response = await fetch(
       "https://api.deepinfra.com/v1/openai/chat/completions",
       {
         method: "POST",
         body: JSON.stringify({
-          model: "meta-llama/Llama-2-70b-chat-hf",
+          model: "cognitivecomputations/dolphin-2.6-mixtral-8x7b",
           messages: messages,
           max_tokens: 200,
         }),
