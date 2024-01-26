@@ -107,7 +107,6 @@ import Card from "../components/Card.astro";
   let messageHistory: any[] = [];
   document.addEventListener("DOMContentLoaded", function () {
     var input = document.querySelector(".chat-input input") as HTMLInputElement;
-    input.value += " Justin: ";
 
     // Attach event listener to the button
     var button = document.querySelector(
@@ -115,6 +114,8 @@ import Card from "../components/Card.astro";
     ) as HTMLBaseElement;
 
     button.addEventListener("click", () => {
+      input.value += " Justin: ";
+
       messageHistory.push({ role: "user", content: input.value });
       send();
       addUserMessage(input.value);
@@ -123,6 +124,8 @@ import Card from "../components/Card.astro";
 
     // Attach event listener to the input for Enter key
     input.addEventListener("keypress", function (event) {
+      input.value += " Justin: ";
+
       if (event.key === "Enter") {
         messageHistory.push({ role: "user", content: input.value });
         send();
